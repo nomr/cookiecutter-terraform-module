@@ -2,9 +2,10 @@
     "full_name": "Your name",
     "email": "Your address email (eq. you@example.com)",
     "github_username": "Your github username",
-    "project_name": "Name of the project",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-    "project_short_description": "A short description of the project",
+    "module_name": "The type of infrastructure this module manages",
+    "provider_name": "The main provider where the infrastructure is created (e.g. aws, google, docker)",
+    "short_description": "A short description of the module",
+    "project_slug": "terraform-{{cookiecutter.provider_name.lower().replace('-','')}}-{{ cookiecutter.module_name.lower().replace(' ', '-') }}",
     "release_date": "{% now 'local' %}",
     "version": "0.1.0",
     "_extensions": ["jinja2_time.TimeExtension"]
